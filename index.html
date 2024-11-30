@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triumphs of Paris 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #1a73e8;
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        pre {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Triumphs of Paris 2024</h1>
+    <h2>Table of Content</h2>
+    <ul>
+        <li><a href="#project-overview">Project Overview</a></li>
+        <li><a href="#data-source">Data Source</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#data-cleaning">Data Cleaning</a></li>
+        <li><a href="#data-analysis">Data Analysis</a></li>
+        <li><a href="#results-findings">Results/Findings</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+    </ul>
+
+    <h2 id="project-overview">Project Overview</h2>
+    <p><strong>Exploring the triumphs of Paris 2024 Olympics</strong></p>
+    <p>This is an exploratory data analysis on the results from the Paris 2024 Olympics. The exploration aims to view trends of medals across various sports activities in different countries. By analyzing this data, we seek to observe the number of participants per event and country and the total medals won in each.</p>
+    <img src="" alt="Project Overview Image">
+    <img src="oly 2.PNG" alt="">
+
+    <h2 id="data-source">Data Source</h2>
+    <p>The database used for this analysis is <strong>'Olympics_2024.csv'</strong>, containing detailed information about medals won, medalists, countries, and more.</p>
+
+    <h2 id="tools">Tools</h2>
+    <ul>
+        <li>Excel - Data cleaning</li>
+        <li>Power BI - Visualization and reports</li>
+    </ul>
+
+    <h2 id="data-cleaning">Data Cleaning</h2>
+    <p>In the data preparation phase, the following tasks were performed:</p>
+    <ol>
+        <li>Data loading and inspection</li>
+        <li>Handling missing values</li>
+        <li>Removed null values and duplicate values</li>
+        <li>Data cleaning and formatting</li>
+    </ol>
+
+    <h2 id="data-analysis">Data Analysis</h2>
+    <p>Interesting DAX syntax was written to calculate columns and metrics:</p>
+    <pre>
+AGE 2 = DATEDIFF(medallists[birth_date], TODAY(), YEAR)
+RANK = RANKX(medals_total, medals_total[Points total])
+Points total = medals_total[Gold total] + medals_total[Silver total] + medals_total[Bronze total]
+    </pre>
+
+    <h2 id="results-findings">Results/Findings</h2>
+    <ol>
+        <li>USA had the highest medals: 111</li>
+        <li>USA had the highest medal points: 216, making it the winner of the 2024 Paris Olympics.</li>
+        <li>China had the second-highest medal points: 176.</li>
+        <li>Athletics and Swimming had the highest number of medals: 112 and 105, respectively.</li>
+        <li>The USA had the highest number of athletes for the 2024 Olympics, with over 600 athletes. They participated in 47 disciplines out of 49, which could account for the high number of medals won by the USA.</li>
+    </ol>
+
+    <h2 id="conclusion">Conclusion</h2>
+    <p>In the grand arena of Paris 2024, the numbers tell a story of determination, excellence, and unmatched athletic prowess.</p>
+    <p>The USA's dominance with 111 medals and a remarkable 216 points underscores their global sportsmanship. Zhang Yufei's six-medal feat and Marchand Leon's golden triumphs reflect the spirit of individual brilliance that the Olympics celebrate.</p>
+    <p>This exploration of Paris 2024 not only captures the triumphs of nations and athletes but also highlights the essence of the Olympic spirit—where every medal is a testament to hard work, resilience, and the pursuit of greatness.</p>
+</body>
+</html>
